@@ -25,6 +25,8 @@ src: local('Technicality1'), url('technicality1.woff') format('woff');
     margin-top:-20px;
     margin: 0 auto;
     margin-left: -50px;
+    width: 90%;
+    height:80%;
 }
 .wrapper-div{
     position:relative;
