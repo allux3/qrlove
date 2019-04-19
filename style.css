@@ -23,6 +23,8 @@ src: local('Technicality1'), url('technicality1.woff') format('woff');
 
 #thumbs{
     margin-top:-20px;
+    margin: 0 auto;
+    margin-left: -50px;
 }
 .wrapper-div{
     position:relative;
