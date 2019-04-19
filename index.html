@@ -1,49 +1,66 @@
-<!--<!DOCTYPE html>-->
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Cover QR SCAN - Aline</title>
+    <title>SCAN#1</title>
     <link rel="stylesheet" href="./style.css">
-    <!--<script src="http://code.jquery.com/jquery-latest.min.js"></script>-->
     <script src="./jquery-3.3.1.min.js"></script>
-
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">    
   </head>
-  <body style="background-color:#fff100;">
+  <body>
       
-     <div class = "wrapper-div" style="background-color:#fff100;">
+     <div class = "wrapper-div">
           <div class = "content-div" id="content-div">
-           
-            <h4 id="header">ALINE'S<br>PORTFOLIO</h4>
-              <span style="display:inline-block;" class="arrow-right"></span><p id="text" style="display:inline-block;font-weight: 900;letter-spacing: 3px;">
-              SCAN #1<br></p><p id="text" style="display:inline-block;letter-spacing: 2px;">KILLED PORTFOLIO COVERS<br></p>
+           <span class="animate-item"></span>
+            <h4 id="header" class="animate-item">KILLED COVERS</h4>
+              <div id="subtitle">
+                <div style="display:inline-block;" class="arrow-right animate-item"></div>
+                <p id="text" style="display:inline-block;font-weight: 900;letter-spacing: 3px;" class="animate-item">SCAN #1<br></p><br>
+                <p id="text" style="display:inline-block;letter-spacing: 2px;" class="animate-item">KILLED PORTFOLIO COVERS FOR SOPHOMORE <br>YEAR 2018 - 2019<br></p>
+              </div>
+                  
               <div id="img-container">
-              <img class="pics" style="width:300px;height:300px;padding:2px;" src="./1.png">
-              <img class="pics" style="width:300px;height:300px;padding:2px;" src="./2.png">
-              <img class="pics" style="width:300px;height:300px;padding:2px;"src="./3.png">
-              <img class="pics" style="width:300px;height:300px;padding:2px;"src="./5.png">
-              <img class="pics" style="width:300px;height:300px;padding:2px;"src="./4.png">
-              <img class="pics" style="width:300px;height:300px;padding:2px;"src="./6.png">
+              <img class="pics animate-item" style="width:300px;height:300px;" src="./1.png">
+              <img class="pics animate-item" style="width:300px;height:300px;" src="./2.png">
+              <img class="pics animate-item" style="width:300px;height:300px;"src="./3.png">
+              <img class="pics animate-item" style="width:300px;height:300px;"src="./5.png">
+              <img class="pics animate-item" style="width:300px;height:300px;"src="./4.png">
+              <img class="pics animate-item" style="width:300px;height:300px;"src="./6.png">
+              <img class="pics animate-item" style="width:300px;height:300px;"src="./7.png">
+              <img class="pics animate-item" style="width:300px;height:300px;"src="./8.png">
               </div>
               
           </div>
-          <!--<div class="info">
-             <!-- <p id="explanation">Buy this piece of art for <span style="font-size:60px">5$</span></p>-->
-             
-          <!--</div>-->
      </div>
-
-
-
-
-
-<script>
+   
       
-      
-</script>
+<script type="text/javascript">
+
+    function entireAnimation() {
+      var items = document.querySelectorAll('.animate-item');
+      var isMoved = false;
+        isMoved = !isMoved;
+        for ( var i=0; i < items.length; i++ ) {
+          var toggleItemMove = getToggleItemMove( i );
+          var delay = isMoved ? ( items.length - i - 1 ) : i;
+          delay *= 50;
+          setTimeout( toggleItemMove, delay );
+        }
+
+      function getToggleItemMove( i ) {
+        var item = items[i];
+        return function() {
+          item.classList.toggle('is-moved');
+        }
+      }
+
+    }
+
+    window.onload = entireAnimation();
+
+    </script>
 </body>
 </html>
