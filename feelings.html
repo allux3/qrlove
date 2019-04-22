@@ -1,44 +1,66 @@
-<!--<!DOCTYPE html>-->
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Cover QR SCAN - Aline</title>
+    <title>SCAN#4</title>
     <link rel="stylesheet" href="./style.css">
-    <!--<script src="http://code.jquery.com/jquery-latest.min.js"></script>-->
     <script src="./jquery-3.3.1.min.js"></script>
-
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">    
   </head>
-  <body style="background-color:#fff100;">
+  <body>
       
-     <div class = "wrapper-div" style="background-color:#fff100;">
+     <div class = "wrapper-div">
           <div class = "content-div" id="content-div">
-           
-            <h4 id="header">DISASSEMBLY OF FEELINGS FOR SOMEONE </h4>
-              <span style="display:inline-block;" class="arrow-right"></span><p id="text" style="display:inline-block;font-weight: 900;letter-spacing: 3px;">
-              SCAN #1<br></p><p id="text" style="display:inline-block;letter-spacing: 2px;">UNDER CONSTRUCTION<br></p>
-              <div id="img-container">
-              
+           <span class="animate-item"></span>
+            <h4 id="header" class="animate-item">THE IDEA BEHIND <br>THE FEELINGS MANUAL</h4>
+              <div id="subtitle">
+                <div style="display:inline-block;" class="arrow-right animate-item"></div>
+                <p id="text" style="display:inline-block;font-weight: 900;letter-spacing: 3px;" class="animate-item">SCAN #4<br></p><br>
+                <p id="text" style="display:inline-block;letter-spacing: 2px;" class="animate-item">HERE'S HOW I GOT TO THE NOTION <br>OF DISASSMBLYING FEELINGS FROM <br>SOMEONE INSTRUCTION NOTEBOOK<br></p>
+                   <p id="text" style="display:inline-block;letter-spacing: 2px;" class="animate-item">I had feelings for someone obviously, except they weren't too much to do anything with. I mean, nothing is ever black and white or 0% and 100%, we live in a bundle of colorful grey areas. So I decided I shall put my feelings on psychological steroids and make them even more than what they were. Intentionally for creating this furniture inspired instruction book. How can I use a platform that shows you very clearly with no error how to assemble a closet or a coffee table in order to do the opposite.<br> To disassemble. But something so vague and unmeasurable? Obviously that is not the greatest way to get over someone, these things are natural and there is no specimen. So I wanted to create a formula given the notion there might not be one. That is what I came up with.</p>
               </div>
+                  
+              
               
           </div>
-          <!--<div class="info">
-             <!-- <p id="explanation">Buy this piece of art for <span style="font-size:60px">5$</span></p>-->
-             
-          <!--</div>-->
      </div>
 
 
 
 
 
-<script>
+
       
       
-</script>
+<script type="text/javascript">
+
+    function entireAnimation() {
+      var items = document.querySelectorAll('.animate-item');
+      var isMoved = false;
+        isMoved = !isMoved;
+        for ( var i=0; i < items.length; i++ ) {
+          var toggleItemMove = getToggleItemMove( i );
+          var delay = isMoved ? ( items.length - i - 1 ) : i;
+          delay *= 50;
+          setTimeout( toggleItemMove, delay );
+        }
+
+      function getToggleItemMove( i ) {
+        var item = items[i];
+        return function() {
+          item.classList.toggle('is-moved');
+        }
+      }
+
+    }
+
+     window.addEventListener('DOMContentLoaded', (event) => {
+       entireAnimation(); 
+    });
+
+    </script>
 </body>
 </html>
